@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="wrapper_content">
+        @if ((_changeFormService.$typeForm | async) === typeLogin.login) {
+            <app-login />
+        }@else {
+            <app-register />
+        }
+    </div>
+</div>

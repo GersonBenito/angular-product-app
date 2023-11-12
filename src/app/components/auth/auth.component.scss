@@ -1,0 +1,17 @@
+
+.wrapper{
+    background: linear-gradient(180deg, #FFF 31.21%, rgba(255, 255, 255, 0.00) 55.66%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper_content{
+        width: 30%;
+        height: 75%;
+        flex-shrink: 0;
+        padding: 32px;
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 19px 40px 0px rgba(0, 0, 0, 0.05);
+    }
+}

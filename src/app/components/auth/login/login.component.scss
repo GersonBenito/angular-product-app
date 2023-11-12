@@ -1,0 +1,129 @@
+$font: 'Poppins', sans-serif;
+.wrapper{
+    width: 100%;
+    .wrapper_content{
+        .warpper_content_header{
+            p{
+                margin: 0;
+                color: rgba(0, 0, 0, 0.50);
+                font-family: $font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px; /* 137.5% */
+                letter-spacing: 0.48px;
+                margin-bottom: 8px;
+            }
+            .header_singin{
+                color: #000;
+                font-family: $font;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; 
+                margin-bottom: 24px;
+            }
+        }
+        .wrapper_content_form{
+            .form_field{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 16px;
+                label{
+                    color: #000;
+                    font-family: $font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal; 
+                }
+                input{
+                    height: 32px;
+                    background: #FFF6F4;
+                    border: 1px solid #c8c4c461;
+                    padding: 0 8px;
+                    border-radius: 4px;
+                    outline: none;
+                }
+                .form_field_label{
+                    display: flex;
+                    justify-content: space-between;
+                    span{
+                        color: #000;
+                        text-align: right;
+                        font-family: $font;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                        cursor: pointer;
+                    }
+                }
+                .form_field_input{
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: auto 10%;
+                    gap: 8px;
+                    background: #FFF6F4;
+                    border: 1px solid #c8c4c461;
+                    height: 32px;
+                    border-radius: 4px;
+                    input{
+                        border: none;
+                        outline: none;
+                    }
+                    .form_field_input_icon{
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-right: 8px;
+                        img{
+                            width: 22px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .form_button{
+                text-align: center;
+                button{
+                    border-radius: 23px;
+                    background: #F47458;
+                    border: none;
+                    padding: 4px 16px;
+                    cursor: pointer;
+                    color: #FFF;
+                    font-family: $font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    margin-top: 16px;
+                    &:disabled{
+                        cursor: no-drop;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        .wrapper_content_footer{
+            color: rgba(0, 0, 0, 0.20);
+            font-family: $font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 137.5% */
+            letter-spacing: 0.48px;
+            display: flex;
+            gap: 8px;
+            margin-top: 32px;
+            p{
+                margin: 0;
+            }
+            span{
+                color: #F47458;
+                cursor: pointer;
+            }
+        }
+    }
+}

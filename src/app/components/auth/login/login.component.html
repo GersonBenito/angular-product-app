@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div class="wrapper_content">
+        <div class="wrapper_content_logo">
+            <img src="assets/image/logo-first.png" width="200" alt="logo">
+        </div>
+        <div class="warpper_content_header">
+            <p>Welcome back !!!</p>
+            <div class="header_singin">Sing in</div>
+        </div>
+        <div class="wrapper_content_form">
+            <form [formGroup]="formParent" (ngSubmit)="handleSubmit()">
+                <div class="form_field">
+                    <label for="">Email</label>
+                    <input type="text" formControlName="email" placeholder="user@email.com">
+                </div>
+                <div class="form_field">
+                    <div class="form_field_label">
+                        <label for="">Password</label>
+                        <span>Forgot Password ?</span>
+                    </div>
+                    <div class="form_field_input">
+                        <input [type]="type" formControlName="password" placeholder="12345">
+                        <div class="form_field_input_icon">
+                            @if (type === typeLogin.password) {
+                                <img src="assets/image/hide.png" (click)="showPassword()" alt="hide">
+                            }@else {
+                                <img src="assets/image/show.png" (click)="showPassword()" alt="show">
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="form_button">
+                    <button type="submit" [disabled]="formParent.invalid">Sing in</button>
+                </div>
+            </form>
+        </div>
+        <div class="wrapper_content_footer">
+            <p>I don’t have an account ?</p>
+            <span (click)="changeForm()">Sign up</span>
+        </div>
+    </div>
+</div>
