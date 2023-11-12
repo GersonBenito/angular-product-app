@@ -1,0 +1,33 @@
+<p>counter: {{count}}</p>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Increment</button>
+
+@if (count >= 18) {
+    <!-- <p [style.color]="'red'">Eres mayor de edad</p> -->
+    <p [ngStyle]="{'color': count >= 18 && 'red'}">Eres mayor de edad</p>
+}@else {
+    <p >Eres menor de edad</p>
+}
+
+<!-- Lazy load components form 1 -->
+@defer (when count >= 10) {
+    <!-- solo muestra los datos cargados -->
+    <p>Datos cargados</p>
+}@placeholder {
+    <!-- <p>Cargando...</p> -->
+    <img src="https://gifs.eco.br/wp-content/uploads/2021/08/imagens-e-gifs-de-loading-1.gif" width="200" alt="gif">
+}
+
+<!-- Lazy load components form 2 -->
+<!-- @defer {
+    <p>Datos cargados</p>
+}@loading(after 100ms; minimum 7s) {
+    <img src="https://gifs.eco.br/wp-content/uploads/2021/08/imagens-e-gifs-de-loading-1.gif" width="200" alt="gif">
+} -->
+
+@for (prod of product; track $index) {
+    <p>number: {{prod}}</p>
+}@empty {
+    <p>No hay productos para mostrar</p>
+}
+
